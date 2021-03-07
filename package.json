@@ -2,14 +2,14 @@
   "name": "expensify",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Andrew Mead",
+  "author": "Giorgos Manousakis",
   "license": "MIT",
   "scripts": {
-    "serve": "live-server public/",
-    "build:dev": "webpack",
+    "serve": "live-server public --watch",
+    "build:dev": "webpack --watch",
     "build:prod": "webpack -p --env production",
-    "dev-server": "webpack-dev-server",
-    "test": "jest --config=jest.config.json",
+    "dev-server": "webpack-dev-server --watch",
+    "test": "jest --watch --config=jest.config.json",
     "start": "node server/server.js",
     "heroku-postbuild": "yarn run build:prod"
   },
@@ -51,6 +51,5 @@
     "validator": "8.0.0",
     "webpack": "3.1.0",
     "webpack-dev-server": "2.5.1"
-  },
-  "devDependencies": {}
+  }
 }

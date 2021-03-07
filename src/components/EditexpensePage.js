@@ -4,7 +4,7 @@ import ExpenseForm from './ExpenseForm';
 import {editExpense, removeExpense} from '../actions/expenses';
 
 //testing 
-//refactor editExpensePage to be a class based component
+//refactor EditExpensePage to be a class based component
 //setup mapDispatchToProps editExpense and removeExpense
 
 
@@ -35,12 +35,11 @@ export class EditExpensePage extends React.Component {
 //Remove the expense via dispatch and then redirect to dashboard
 
 
-const mapStateToProps = (state, props) => {
-    return {
-        expense: state.expenses.find((expense) => { //search through an array with find()
-            return expense.id === props.match.params.id;
-        })}
-};
+
+const mapStateToProps = (state, props) => ({
+    expense: state.expenses.find((expense) => expense.id === props.match.params.id)
+  });
+  
 
 const mapDispatchToProps = (dispatch, props) => ({
     editExpense: (id, expense) => dispatch(editExpense(id,expense)),
