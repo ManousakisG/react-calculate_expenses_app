@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {DateRangePicker} from 'react-dates';
 import {setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate} from '../actions/filters';
-import { start } from 'live-server';
 
  export class ExpenseListFilters extends React.Component {   //class based components need this.props!!
     state = {
