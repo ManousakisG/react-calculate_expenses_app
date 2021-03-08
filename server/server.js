@@ -1,4 +1,3 @@
-//Express framework
 const path =require('path');
 const express =require('express');
 const app=express();
@@ -13,3 +12,5 @@ app.get('*', (req, res) => { // if something then give index.html
 app.listen(port, () => { //port 3000 is available in all OS.
     console.log('Server is up!!');
 });
+
+//Express framework
